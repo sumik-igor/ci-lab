@@ -8,7 +8,7 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-later
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
