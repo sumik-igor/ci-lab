@@ -30,3 +30,9 @@ jobs:
 
       - name: Show Python version
         run: python3 --version
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Show files
+        run: ls -la
