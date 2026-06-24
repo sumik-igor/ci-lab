@@ -1,7 +1,0 @@
-# .gitlab-ci.yml
-test:
-  script:
-    - echo "Hello from GitLab CI"
-    - hostname
-    - whoami
-    - cat /etc/os-release
