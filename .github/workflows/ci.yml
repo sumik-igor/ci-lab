@@ -1,4 +1,4 @@
-name: First CI
+name: Python CI
 
 on:
   push:
@@ -6,33 +6,15 @@ on:
       - main
 
 jobs:
-  hello:
+  python:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print message
-        run: echo "Hello from GitHub Action"
-
-      - name: Who am I
-        run: whoami
-
-      - name: Show current directory
-        run: pwd
-
-      - name: Show hostname
-        run: hostname
-
-      - name: Show files
-        run: ls -la
-
-      - name: Show Docker version
-        run: docker --version
-
-      - name: Show Python version
-        run: python3 --version
-
       - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Show files
         run: ls -la
+
+      - name: Run python
+        run: python3 app.py
