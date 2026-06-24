@@ -1,24 +1,32 @@
 name: First CI
 
 on:
-push:
-branches:
-- main
+  push:
+    branches:
+      - main
 
 jobs:
-hello:
-runs-on: ubuntu-latest
+  hello:
+    runs-on: ubuntu-latest
 
-steps:
-  - name: Print message
-    run: echo "Hello from GitHub Actions"
+    steps:
+      - name: Print message
+        run: echo "Hello from GitHub Action"
 
-  - name: Show Python version
-    run: python3 --version
+      - name: Who am I
+        run: whoami
 
-  - name: Show system info
-    run: |
-      whoami
-      pwd
-      hostname
-      uname -a
+      - name: Show current directory
+        run: pwd
+
+      - name: Show hostname
+        run: hostname
+
+      - name: Show files
+        run: ls -la
+
+      - name: Show Docker version
+        run: docker --version
+
+      - name: Show Python version
+        run: python3 --version
