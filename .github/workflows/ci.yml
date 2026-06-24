@@ -1,3 +1,4 @@
+
 name: Python CI
 
 on:
@@ -7,7 +8,7 @@ on:
 
 jobs:
   test:
-    rons-on: ubuntu-later
+    runs-on: ubuntu-later
 
     steps:
       - name: Checkout repository
